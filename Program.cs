@@ -39,6 +39,20 @@ namespace CalculadoraIMC
             }else if(imc > 40)
             Console.WriteLine("Obesidade III (mórbida)");
 
+            double pesoIdeal= 0;
+
+           if(imc < 18.5)
+           {
+              pesoIdeal= (18.5*(altura*altura)) -  peso;
+              console.WriteLine("você precisa ganhar {0} Kg para atigir o peso ideal",pesoIdeal);
+
+           }else if (imc >= 25)
+           {
+               pesoIdeal= peso - (24.99*(altura*altura));
+               console.WriteLine("Você precisa perder {0} Kg para atingir o peso ideal", pesoIdeal);
+               
+           }
+
             }
             
         }
